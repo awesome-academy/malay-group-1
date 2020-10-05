@@ -19,6 +19,8 @@ en:
       notification_index: "View All"
       statistic_header: "Statistic"
       new_topic: "Add Topic"
+      notifications: "Notifications"
+      post: "Create Post"
 
   static_pages:
     home:
