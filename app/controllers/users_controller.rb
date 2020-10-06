@@ -61,11 +61,11 @@ class UsersController < ApplicationController
   def import
     file = params[:attachment]
     if params[:attachment].blank? || File.extname(file.original_filename) != ".xlsx"
-      flash[:warning] = t "warn_mess_import"
+      flash[:warning] = t ".fail_mess_import"
     elsif User.import(file)
       flash[:success] = t ".success_mess_import"
     else
-      flash[:warning] = t ".fail_mess_import"
+      flash[:warning] = t ".warn_mess_import"
     end
     redirect_to users_path
   end

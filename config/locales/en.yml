@@ -124,9 +124,9 @@ en:
     created_at: "commented "
     ago:  " ago"
   posts:
-    title: "Posts"
+    title: "Home-Posts"
     header: "Create Post"
-    edit: "Edit Posts"
+    edit: "Edit Post"
     add: "Add Posts"
     update: "Updated"
     updatefail: "Fail to update"
@@ -213,7 +213,7 @@ en:
   mailbox:
     folder_view:
       compose: "Compose"
-      title: "Compose Message"
+      title: "Compose Message-"
     inbox:
       title: "Inbox"
     sent:
@@ -256,3 +256,11 @@ en:
       heading: "Chart"
       user_chart: "User Chart"
       post_chart: "Post Chart"
+
+  topics:
+    new:
+      title: "Add Topic"
+      heading: "New Topic"
+    index:
+      title: "Topic List"
+      heading: "Topic List"
