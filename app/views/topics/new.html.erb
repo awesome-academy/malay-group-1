@@ -1,14 +1,17 @@
+<% provide :title, t(".title") %>
 <% if logged_in? && current_user.admin? %>
   <%= form_for :topic, url: topics_path do |f| %>
-    <h1><%= t "topic.topic_new" %></h1>
-    <p>
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
-    </p>
+    <div class="col-md-6 col-md-offset-3">
+      <h1><%= t ".heading" %></h1>
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </p>
 
-    <p>
-      <%= f.submit %>
-    </p>
+      <p>
+        <%= f.submit class: "btn btn-primary" %>
+      </p>
+    </div>
   <% end %>
 <% else %>
     <h3><%= t "topic.deny" %></h3>

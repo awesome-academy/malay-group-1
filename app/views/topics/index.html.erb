@@ -1,18 +1,18 @@
-<div class="container mt-5 ml-5">
+<% provide :title, t(".title") %>
+<h1><%= t ".heading" %></h1>
+<div class="col-md-6 col-md-offset-3">
   <div class="row">
-      <% @topics.each do |topic| %>
-        <div class="table tabel-hover">
-          <%= link_to posts_path(:top => topic.id) do %>
-            <div class="list-group" style="max-width: 500px;">
-              <div class="list-group-item list-group-item-action">
-                <%= topic.name %> (<%= topic.posts.count %>)
-                <%if logged_in? && current_user.admin? %>
-                  <%= link_to t("delete.msg"), topic_path(topic), class: "btn btn-danger" %>
-                <% end %>
-              </div>
-          <% end %>
+    <% @topics.each do |topic| %>
+      <div class="well">
+        <%= link_to posts_path(:top => topic.id) do %>
+          <div class="list-group" style="max-width: 500px;">
+            <%= topic.name %> (<%= topic.posts.count %>)
+            <%if logged_in? && current_user.admin? %>
+              <%= link_to t("delete.msg"), topic_path(topic), class: "btn btn-danger" %>
+            <% end %>
           </div>
-      <% end %>
+        <% end %>
       </div>
+    <% end %>
   </div>
 </div>

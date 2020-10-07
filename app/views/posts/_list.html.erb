@@ -10,6 +10,9 @@
       <%= time_ago_in_words post.created_at %>
       <%= t "posts.ago" %><br>
     </h5>
-    <%= link_to t("read.more"), post_path(post), class: "btn btn-default" %>
+    <link rel="stylesheet" type="text/css" href="loading.css" media="screen"/>
+      <div class="btn btn-default ld ld-heartbeat">
+        <%= link_to t("read.more"), post_path(post) %>
+      </div>
   </div>
 <% end %>

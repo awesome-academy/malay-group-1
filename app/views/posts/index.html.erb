@@ -1,25 +1,31 @@
 <% provide :title, t("posts.title") %>
 
+<p>
 <div class="col-md-3">
   <div class="search">
     <%= t "search.title" %>
     <%= form_tag "", url: posts_path, role: "search", method: :get do %>
       <p>
         <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
-        <%= submit_tag :search %>
+        <%= submit_tag :search, class: "btn btn-primary" %>
       </p>
     <% end %>
   </div>
   <%= render :partial => "topics/nav" %>
 </div>
+</p>
 
+<p>
 <div class="col-md-6">
   <%= render "posts/list" %>
   <div class="pagination">
     <%= paginate @posts %>
   </div>
 </div>
+</p>
 
+<p>
 <div class="col-md-3">
   <%= render "games" %>
 </div>
+</p>
