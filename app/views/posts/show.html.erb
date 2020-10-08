@@ -5,6 +5,10 @@
 <div class="col-md-6 col-md-offset-3">
   <h1><%= @post.title %></h1>
       <p><%= @post.body %></p>
+      <p>
+        <%= t "posts.author" %>
+        <%= link_to @post.user.name, @post.user %>
+      </p>
       <% if logged_in? && (current_user.id == @post.user_id || current_user.admin? ) %>
         <hr>
         <%= link_to t("edit.msg"), edit_post_path(@post), class: "btn btn-primary" %>
