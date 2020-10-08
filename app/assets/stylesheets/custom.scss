@@ -306,5 +306,9 @@ input {
 
 .well {
   background-color: transparent;
-  border: 2px solid $very-light-gray;
+  border: 2px solid black;
+}
+
+.panel {
+  border-radius: 12px;
 }

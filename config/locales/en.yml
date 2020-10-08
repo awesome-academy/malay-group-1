@@ -140,6 +140,7 @@ en:
     ago:  " ago"
     views: " Views"
     main: "New Post"
+    author: "Created by : "
   activity:
     title: "Activities"
     create: "Activity created"
@@ -201,8 +202,8 @@ en:
     edit:
       heading: "Reset Password"
       reset_title: "Reset password"
-    editform:
       ps_reset_submit: "Update password"
+    editform:
       confirmation: "Confirmation"
     new:
       fail_mess_create: "Password reset fail."
